@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/StockWebService/StockWebService?wsdl" uri="wsdl/localhost_8080/StockWebService/StockWebService.wsdl"/>
+    <system systemId="http://localhost:8080/StockWebService/StockWebService?WSDL" uri="wsdl/localhost_8080/StockWebService/StockWebService.wsdl"/>
+    <system systemId="http://localhost:8080/StockWebService/StockWebService?xsd=1" uri="wsdl/localhost_8080/StockWebService/StockWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/StockWebService/StockWebService?xsd=2" uri="wsdl/localhost_8080/StockWebService/StockWebService.xsd_2.xsd"/>
+    <system systemId="http://localhost:8080/CurrencyConvertor/CurrencyConversionWSService?WSDL" uri="wsdl/localhost_8080/CurrencyConvertor/CurrencyConversionWSService.wsdl"/>
+    <system systemId="http://localhost:8080/CurrencyConvertor/CurrencyConversionWSService?xsd=1" uri="wsdl/localhost_8080/CurrencyConvertor/CurrencyConversionWSService.xsd_1.xsd"/>
+</catalog>

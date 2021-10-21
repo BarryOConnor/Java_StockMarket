@@ -1,0 +1,236 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://barryoconnor/" xmlns:ns1="http://xml.netbeans.org/schema/Stocks" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://barryoconnor/">
+
+<xs:import namespace="http://xml.netbeans.org/schema/Stocks" schemaLocation="http://localhost:8080/StockWebService/StockWebService?xsd=1"/>
+
+<xs:element name="buy" type="tns:buy"/>
+
+<xs:element name="buyResponse" type="tns:buyResponse"/>
+
+<xs:element name="getCurrencyListFormatted" type="tns:getCurrencyListFormatted"/>
+
+<xs:element name="getCurrencyListFormattedResponse" type="tns:getCurrencyListFormattedResponse"/>
+
+<xs:element name="getExchangeRate" type="tns:getExchangeRate"/>
+
+<xs:element name="getExchangeRateResponse" type="tns:getExchangeRateResponse"/>
+
+<xs:element name="getStockCodes" type="tns:getStockCodes"/>
+
+<xs:element name="getStockCodesResponse" type="tns:getStockCodesResponse"/>
+
+<xs:element name="newsUpdate" type="tns:newsUpdate"/>
+
+<xs:element name="newsUpdateResponse" type="tns:newsUpdateResponse"/>
+
+<xs:element name="search" type="tns:search"/>
+
+<xs:element name="searchBetween" type="tns:searchBetween"/>
+
+<xs:element name="searchBetweenResponse" type="tns:searchBetweenResponse"/>
+
+<xs:element name="searchResponse" type="tns:searchResponse"/>
+
+<xs:element name="sell" type="tns:sell"/>
+
+<xs:element name="sellResponse" type="tns:sellResponse"/>
+
+<xs:element name="sort" type="tns:sort"/>
+
+<xs:element name="sortResponse" type="tns:sortResponse"/>
+
+<xs:element name="updateCurrenciesValue" type="tns:updateCurrenciesValue"/>
+
+<xs:element name="updateCurrenciesValueResponse" type="tns:updateCurrenciesValueResponse"/>
+
+<xs:element name="updateSharePrices" type="tns:updateSharePrices"/>
+
+<xs:element name="updateSharePricesResponse" type="tns:updateSharePricesResponse"/>
+
+<xs:element name="userLogin" type="tns:userLogin"/>
+
+<xs:element name="userLoginResponse" type="tns:userLoginResponse"/>
+
+<xs:element name="userRegister" type="tns:userRegister"/>
+
+<xs:element name="userRegisterResponse" type="tns:userRegisterResponse"/>
+
+<xs:element name="userUpdate" type="tns:userUpdate"/>
+
+<xs:element name="userUpdateResponse" type="tns:userUpdateResponse"/>
+
+<xs:complexType name="sell">
+<xs:sequence>
+<xs:element name="symbol" type="xs:string" minOccurs="0"/>
+<xs:element name="amount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sellResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:operationResult" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="operationResult">
+<xs:sequence>
+<xs:element name="operationValid" type="xs:boolean"/>
+<xs:element name="errorInformation" type="xs:string" minOccurs="0"/>
+<xs:element name="resultsList" type="ns1:share_type" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buy">
+<xs:sequence>
+<xs:element name="symbol" type="xs:string" minOccurs="0"/>
+<xs:element name="amount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buyResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:operationResult" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userUpdate">
+<xs:sequence>
+<xs:element name="currentUser" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userUpdateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCurrencyListFormatted">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCurrencyListFormattedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getStockCodes">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getStockCodesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchBetween">
+<xs:sequence>
+<xs:element name="searchField" type="xs:string" minOccurs="0"/>
+<xs:element name="startSearchValue" type="xs:string" minOccurs="0"/>
+<xs:element name="endSearchValue" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchBetweenResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:operationResult" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sort">
+<xs:sequence>
+<xs:element name="sortField" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sortResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:operationResult" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateSharePrices">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateSharePricesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="search">
+<xs:sequence>
+<xs:element name="searchField" type="xs:string" minOccurs="0"/>
+<xs:element name="searchType" type="xs:string" minOccurs="0"/>
+<xs:element name="searchValue" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="searchResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:operationResult" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="newsUpdate">
+<xs:sequence>
+<xs:element name="company" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="newsUpdateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getExchangeRate">
+<xs:sequence>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getExchangeRateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userLogin">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCurrenciesValue">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateCurrenciesValueResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userRegister">
+<xs:sequence>
+<xs:element name="email" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userRegisterResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

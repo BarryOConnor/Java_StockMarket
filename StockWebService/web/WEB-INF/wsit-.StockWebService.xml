@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ <definitions 
+ xmlns="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="StockWebService" targetNamespace="http://barryoconnor/" xmlns:tns="http://barryoconnor/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:fi="http://java.sun.com/xml/ns/wsit/2006/09/policy/fastinfoset/service" xmlns:tcp="http://java.sun.com/xml/ns/wsit/2006/09/policy/soaptcp/service" 
+ >
+    <message name="buy"/>
+    <message name="buyResponse"/>
+    <message name="sell"/>
+    <message name="sellResponse"/>
+    <message name="sort"/>
+    <message name="sortResponse"/>
+    <message name="searchBetween"/>
+    <message name="searchBetweenResponse"/>
+    <message name="search"/>
+    <message name="searchResponse"/>
+    <message name="updateSharePrice"/>
+    <message name="updateSharePriceResponse"/>
+    <message name="DatatypeConfigurationException"/>
+    <portType name="StockWebService">
+        <operation name="buy">
+            <input message="tns:buy"/>
+            <output message="tns:buyResponse"/>
+        </operation>
+        <operation name="sell">
+            <input message="tns:sell"/>
+            <output message="tns:sellResponse"/>
+        </operation>
+        <operation name="sort">
+            <input message="tns:sort"/>
+            <output message="tns:sortResponse"/>
+        </operation>
+        <operation name="searchBetween">
+            <input message="tns:searchBetween"/>
+            <output message="tns:searchBetweenResponse"/>
+        </operation>
+        <operation name="search">
+            <input message="tns:search"/>
+            <output message="tns:searchResponse"/>
+        </operation>
+        <operation name="updateSharePrice">
+            <input message="tns:updateSharePrice"/>
+            <output message="tns:updateSharePriceResponse"/>
+            <fault name="DatatypeConfigurationException" message="tns:DatatypeConfigurationException"/>
+        </operation>
+    </portType>
+    <binding name="StockWebServicePortBinding" type="tns:StockWebService">
+        <wsp:PolicyReference URI="#StockWebServicePortBindingPolicy"/>
+        <operation name="buy">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="sell">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="sort">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="searchBetween">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="search">
+            <input/>
+            <output/>
+        </operation>
+        <operation name="updateSharePrice">
+            <input/>
+            <output/>
+            <fault name="DatatypeConfigurationException"/>
+        </operation>
+    </binding>
+    <service name="StockWebService">
+        <port name="StockWebServicePort" binding="tns:StockWebServicePortBinding"/>
+    </service>
+    <wsp:Policy wsu:Id="StockWebServicePortBindingPolicy">
+        <wsp:ExactlyOne>
+            <wsp:All/>
+        </wsp:ExactlyOne>
+    </wsp:Policy>
+</definitions>

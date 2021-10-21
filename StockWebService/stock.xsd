@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://xml.netbeans.org/schema/Stocks"
+	xmlns:tns="http://xml.netbeans.org/schema/Stocks"
+	elementFormDefault="qualified">
+
+	<xsd:complexType name="share_type">
+		<xsd:sequence>
+			<xsd:element name="company_name" type="xsd:string" />
+			<xsd:element name="symbol" type="xsd:string" />
+			<xsd:element name="no_of_shares" type="xsd:int" />
+			<xsd:element name="share_price">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="currency" type="xsd:string" />
+						<xsd:element name="value" type="xsd:double" />
+						<xsd:element name="last_updated" type="xsd:dateTime" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+	<xsd:element name="stock_market">
+		<xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="share" type="tns:share_type" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

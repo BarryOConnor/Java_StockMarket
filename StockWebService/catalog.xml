@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/I:/NTU/SCCC/SCCCProject/WebService/../stock.xml" uri="src/conf/xml-resources/jaxb/StockRequest/stock.xml"/>
+    <system systemId="file:/I:/NTU/SCCC/SCCCProject/StockWebService/../stock.xsd" uri="src/conf/xml-resources/jaxb/stockBinding/stock.xsd"/>
+    <system systemId="file:/I:/NTU/SCCC/SCCCProject/StockWebService/../stock.xml" uri="src/conf/xml-resources/jaxb/stockBinding/stock.xml"/>
+    <system systemId="file:/I:/NTU/SCCC/SCCCProject/StockWebService/stock.xml" uri="src/conf/xml-resources/jaxb/stockBinding/stock.xml"/>
+    <system systemId="http://www.barryoconnor.co.uk/stock.xsd" uri="src/conf/xml-resources/jaxb/stockBinding/www.barryoconnor.co.uk/stock.xsd"/>
+    <system systemId="file:/I:/NTU/SCCC/SCCCProject/StockWebService/stock.xsd" uri="src/conf/xml-resources/jaxb/stockBinding/stock.xsd"/>
+    <system systemId="file:/I:/NTU/SCCC/SCCCProject/SCCC-Stock-Market-SOA/StockWebService/stock.xsd" uri="src/conf/xml-resources/jaxb/StockBinding/stock.xsd"/>
+    <system systemId="http://localhost:8080/CurrencyConvertor/CurrencyConversionWSService?WSDL" uri="src/conf/xml-resources/web-service-references/CurrencyConversionWSService/wsdl/localhost_8080/CurrencyConvertor/CurrencyConversionWSService.wsdl"/>
+    <system systemId="http://localhost:8080/CurrencyConvertor/CurrencyConversionWSService?xsd=1" uri="src/conf/xml-resources/web-service-references/CurrencyConversionWSService/wsdl/localhost_8080/CurrencyConvertor/CurrencyConversionWSService.xsd_1.xsd"/>
+</catalog>
